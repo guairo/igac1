@@ -7,7 +7,7 @@ Asegúrate de tener Python y pip instalados en tu sistema. Puedes descargar Pyth
 Paso 1: Clona el Repositorio
 bash
 Copy code
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/ronymendoza10/IGAC.git
 
 Paso 2: Instala las Dependencias
 Instala las dependencias necesarias utilizando el siguiente comando:
