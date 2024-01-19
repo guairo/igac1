@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <title>GEOVISOR</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
+    
+    <!-- BEGIN GLOBAL MANDATORY STYLES -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ url_for('static', filename='assets/css/plugins.css') }}" rel="stylesheet" type="text/css" />    
+    <!-- END GLOBAL MANDATORY STYLES -->
+
+    <!-- BEGIN PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="assets/css/forms/theme-checkbox-radio.css">
+    <link href="plugins/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/apps/contacts.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.20/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.20/"></script>
+    <!-- END PAGE LEVEL STYLES -->    
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #mapContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        #controlsContainer {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #controlsContainer input,
+        #controlsContainer button {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body >
+    
+    <!--  BEGIN NAVBAR  -->
+    <div class="header-container">
+        <header class="header navbar navbar-expand-sm">
+
+            <a href="javascript:void(0);" class="sidebarCollapse" data-placement="bottom"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></a>
+
+            <div class="nav-logo align-self-center">
+                <a class="navbar-brand" href="index.html"> <span class="navbar-brand-name">GEOVISOR</span></a>
+            </div>
+
+            <ul class="navbar-item flex-row mr-auto">
+                <li class="nav-item align-self-center search-animated">
+                    <form class="form-inline search-full form-inline search" role="search">
+                        <div class="search-bar">
+                            <input type="text" id="divipolaInput" maxlength="5" class="form-control search-form-control  ml-lg-auto" placeholder="DIVIPOLA:">
+                          
+                        </div>
+                    </form>
+                 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search toggle-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                </li>
+                <div class="form-group text-left mr-10 mt-4">
+                    <button type="button" class="btn btn-primary mb-2 mr-2 ml-2" onclick="getServiceWebData()">
+                        Servicio Web
+                    </button>
+                    <button type="button" class="btn btn-success mb-2 mr-2" onclick="getBackendData()">
+                        Backend
+                    </button>
+                </div>
+            </ul>
+          
+
+        </header>
+    </div> 
+    <!--  END NAVBAR -->
+
+    <!-- <div class="card component-card_1">
+        <div class="card-body"> -->
+            <div id="mapContainer"></div>
+        <!-- </div>
+    </div> -->
+
+        <!-- END MAIN CONTAINER -->
+    
+    <!-- BEGIN GLOBAL MANDATORY SCRIPTS -->
+    <!-- <script src="{{ url_for('static', filename='assets/js/libs/jquery-3.1.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>  -->
+    <script src="{{ url_for('static', filename='assets/js/app.js') }}"></script>
+
+    <!-- <script src="{{ url_for('static', filename='assets/js/custom.js') }}"></script> -->
+    <!-- END GLOBAL MANDATORY SCRIPTS -->
+    <!-- <script src="{{ url_for('static', filename='plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/js/apps/contact.js') }}"></script> -->
+    <script src="{{ url_for('static', filename='assets/js/visor.js') }}"></script>
+    
+</body>
+</html>
